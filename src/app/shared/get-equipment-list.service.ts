@@ -12,5 +12,8 @@ export class GetEquipmentListService {
   //   return this.http.post('http://api.ristarindia.com/User/equipment.php',data);
 
   // }
+  getContainerData(id: any){
+    return this.http.get('http://api.ristarindia.com/User/equipment.php/'+id);
+  }
 
 }

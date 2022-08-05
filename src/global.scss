@@ -1,11 +1,22 @@
 @import "~@ionic/angular/css/core.css";
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import "primeflex/primeflex.css";
 // Mixin
+@mixin flex {
+    display:flex;
+}
+@mixin flex-align-center {
+  display:flex;
+  align-items:center;
+}
 @mixin center {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+// colors
+$black:#000;
+$white:#fff;
 
 * {
     margin: 0;
@@ -124,14 +135,61 @@ form {
         padding: 10px;
     }
 }
+
 .isoTank{
   .searchBox{
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+    input{
+      width: 95%;
+      margin: 0 auto;
+      background: transparent !important;
+      padding: 10px;
+      border: 1px solid #333;
+      color: #333;
+      border-radius: 5px;
+    }
+  }
+}
+
+.searchBoxContainer{
+  .searchBox{
+    @include flex-align-center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    padding: 2px;
+    position:relative;
+    .back-btn{
+      margin-top: 3px;
+    }
     input{
     width:100%;
     background:transparent !important;
-    padding:10px;
-    border:1px solid #333;
+    padding: 10px 4px;
+    border:none;
+    color:#333;
+    outline:none;
+    }
+    .addBtn{
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      right:10px;
     }
   }
+}
+.tankDetail{
 
+  .takePicture{
+    position: fixed;
+    bottom:30px;
+    right:30px;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:rgb(151, 151, 151);
+    @include center;
+    color:$white;
+
+  }
 }
