@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
       this.router.navigateByUrl('/');
     }else{
       console.log('Not Logged');
-      this.router.navigateByUrl('login');
+      this.router.navigateByUrl('/');
     }
 
   }
