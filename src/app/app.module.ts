@@ -16,10 +16,13 @@ import { HeaderComponent } from './components/header/header.component';
 import {HttpClientModule} from '@angular/common/http';
 import { LoginService } from './shared/login.service';
 import { GetEquipmentListService } from './shared/get-equipment-list.service';
+import { TankDetailComponent } from './pages/iso-tank/tank-detail/tank-detail.component';
 
 @NgModule({
   declarations: [AppComponent,LoginComponent,
-  HomeComponent,IsoTankComponent,ReeferComponent,DryBoxComponent,HeaderComponent],
+  HomeComponent,IsoTankComponent,ReeferComponent,DryBoxComponent,HeaderComponent,
+    TankDetailComponent
+],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
   FormsModule,HttpClientModule,],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },LoginService,GetEquipmentListService],
